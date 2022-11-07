@@ -304,7 +304,7 @@ public:
 template <typename Type>
 bool operator==(const SimpleVector<Type>& lhs, const SimpleVector<Type>& rhs)
 {
-    return std::equal(lhs.cbegin(), lhs.cend(), rhs.cbegin(), rhs.cend());
+    return lhs.GetSize() == rhs.GetSize() && std::equal(lhs.cbegin(), lhs.cend(), rhs.cbegin(), rhs.cend());
 }
 
 template <typename Type>
